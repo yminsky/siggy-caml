@@ -6,8 +6,10 @@
         {
             "label": "build",
             "type": "shell",
-            "command": "jbuilder build siggy.bc & jbuilder exec ./siggy.bc",
-            "problemMatcher": ["$ocamlc"]
+            "command": "jbuilder build siggy.bc && jbuilder exec ./siggy.bc",
+            "problemMatcher": [
+                "$ocamlc"
+            ]
         }
     ]
 }
