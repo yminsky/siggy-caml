@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+(executable
+ ((name siggy)
+  (flags (:standard -safe-string -short-paths))
+  (libraries (core async))
+  (preprocess (pps (ppx_jane)))
+  ))
