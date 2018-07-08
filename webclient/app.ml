@@ -27,10 +27,10 @@ let apply_action (action: Action.t) (model: Model.t) (_state: State.t)
   : Model.t =
   Sapp.apply_action action model
 
-let view (m: Model.t Incr.t) ~inject:(_: Action.t -> Vdom.Event.t) =
+let view (m: Model.t Incr.t) ~inject =
   let open Incr.Let_syntax in
   let%map m = m in
-  Sapp.view m
+  Sapp.view m ~inject
 
 open Async_kernel
 
